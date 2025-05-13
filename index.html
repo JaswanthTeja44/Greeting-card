@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greeting Card Creator </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Create Your Greeting Card</h1>
+  <div class="container">
+    <label for="theme">Choose a Theme:</label>
+    <select id="theme">
+      <option value="theme-light">Light</option>
+      <option value="theme-dark">Dark</option>
+      <option value="theme-fun">Fun</option>
+    </select>
+
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" placeholder="https://example.com/image.jpg" />
+    <div id="imageError" class="error"></div>
+
+    <label for="imageWidth">Image Width (px):</label>
+    <input type="number" id="imageWidth" placeholder="400" />
+
+    <label for="imageHeight">Image Height (px):</label>
+    <input type="number" id="imageHeight" placeholder="300" />
+
+    <div id="textsContainer">
+      <label>Text Section 1:</label>
+      <textarea class="textSection" rows="2" placeholder="Enter message"></textarea>
+    </div>
+    <button onclick="addTextSection()">Add More Text</button>
+
+    <button onclick="generateCard()">Preview Card</button>
+  </div>
+
+  <div id="previewContainer"></div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
